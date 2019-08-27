@@ -1,5 +1,5 @@
-#################################################### BISMI ALLAH #################################################################
-import argparse, sys, subprocess, time
+############################################### BISMI ALLAH #################################################################
+import argparse, sys, subprocess
 parser = argparse.ArgumentParser(description = 'For an successfull bruteforce attack.')
 parser.add_argument('-f','--file',dest = 'file', type = str, help = 'a file name to input.')
 parser.add_argument('-n','--nchars', dest = 'nchars', type = int, help = 'Maximum lengh of characters.')
@@ -45,4 +45,4 @@ while nchars:
               subprocess.Popen('echo {} >> {}; exit 0'.format(read[line] + chars[char], target_file3), shell = True, stdin = subprocess.PIPE, stderr = subprocess.STDOUT, stdout = subprocess.PIPE)
       nchars -= 1
       lengh = len(read[0]) + 1
-##################################################### AL'HAMDU LILAH #############################################################
+################################################## AL'HAMDU LILAH #############################################################
