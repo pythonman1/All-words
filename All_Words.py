@@ -23,7 +23,6 @@ else:
     for char in range(len(chars)):
         subprocess.Popen('echo {} >> {}; exit 0'.format(chars[char], target_file3), shell = True, stdin = subprocess.PIPE, stderr = subprocess.STDOUT, stdout = subprocess.PIPE)
 while nchars:
-      time.sleep(3)
       print('[*] Words of lengh: %i ...' % (lengh + 1))
       r1 = open(target_file3, 'r')
       r2 = r1.readlines()
