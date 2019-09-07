@@ -22,10 +22,13 @@ else:
     print('[*] Words of lengh: %i ...' % (lengh))
     for char in range(len(chars)):
         subprocess.Popen('echo {} >> {}; exit 0'.format(chars[char], target_file3), shell = True, stdin = subprocess.PIPE, stderr = subprocess.STDOUT, stdout = subprocess.PIPE)
+        sys.stdout.write("[+] Number of words: ℅i\r" % (char + 1))
+        sys.stdout.flush()
 while nchars:
       print('[*] Words of lengh: %i ...' % (lengh + 1))
       r1 = open(target_file3, 'r')
       r2 = r1.readlines()
+      r2len = len(r2)
       r1.close()
       read = []
       for n1 in range(len(r2)):
@@ -42,7 +45,10 @@ while nchars:
          break
       for line in range(len(read)):
           for char in range(len(chars)):
+              r2len += 1
               subprocess.Popen('echo {} >> {}; exit 0'.format(read[line] + chars[char], target_file3), shell = True, stdin = subprocess.PIPE, stderr = subprocess.STDOUT, stdout = subprocess.PIPE)
+              sys.stdout.write("[+] Number of words: %i  [℅i chars]\r" ℅ (r2len, length + 1))
+              sys.stdout.flush()
       nchars -= 1
       lengh = len(read[0]) + 1
 ################################################## AL'HAMDU LILAH #############################################################
