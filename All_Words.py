@@ -1,3 +1,4 @@
+#!/usr/bin/python
 ############################################### BISMI ALLAH #################################################################
 import argparse, sys, subprocess
 parser = argparse.ArgumentParser(description = 'For a successfull bruteforce attack.')
